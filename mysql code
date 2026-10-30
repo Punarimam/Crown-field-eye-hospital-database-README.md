@@ -1,0 +1,6 @@
+use crownfieldhospital;                             
+CREATE USER 'blessing'@'%' IDENTIFIED BY 'abcsha';
+CREATE ROLE IF NOT EXISTS 'world_user';
+GRANT 'world_user' TO 'blessing'@'%';
+SET DEFAULT ROLE 'world_user' FOR 'blessing'@'%';
+FLUSH PRIVILEGES;
